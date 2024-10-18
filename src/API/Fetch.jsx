@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 export default function Fetch () {
 
-    const URL = 'https://universities.hipolabs.com/search?country'
+    const URL = 'http://universities.hipolabs.com/search?country'
     const [query , setQuery] = useState("India")
     const [data ,setData] = useState([]);
     const [page ,setPage] = useState(1)
@@ -22,7 +22,7 @@ export default function Fetch () {
         }
         getdata()
 
-    },[handleclick])
+    },[])
 
     return (
         <div className="w-full bg-gray-600">
