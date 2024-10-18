@@ -22,7 +22,7 @@ export default function Fetch () {
         }
         getdata()
 
-    },[])
+    },[handleclick])
 
     return (
         <div className="w-full bg-gray-600">
@@ -31,6 +31,7 @@ export default function Fetch () {
             <input className="text-center p-1 text-xl border-red-800 border-2 rounded-xl active:border-pink-500" type="text" value={query} onChange={(e)=> setQuery(e.target.value)} />
             </div>
             <div className="flex justify-center text-xl capitalize text-amber-100 m-5">{`These are the colleges of ${query}`}</div>
+            <button onClick={handleclick}></button>
 
             {data.map((college ,index)  => (
                 <div className="grid grid-cols-2 py-2" key={index}>
